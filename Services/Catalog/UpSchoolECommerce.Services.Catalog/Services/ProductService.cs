@@ -23,29 +23,57 @@ namespace UpSchoolECommerce.Services.Catalog.Services
             _mapper = mapper;
 
         }
-        public Task<ResponseDto<ProductDto>> CreateAsync(ProductDto productDto)
+        public async Task<ResponseDto<ProductDto>> CreateAsync(CreateProductDto createProductDto)
         {
-            throw new NotImplementedException();
+            var product = _mapper.Map<Product>(createProductDto);
+            await _productCollection.InsertOneAsync(product);
+            return ResponseDto<ProductDto>.Success(_mapper.Map<ProductDto>(product), 200);
         }
 
-        public Task<ResponseDto<NoContent>> DeleteAsync(string id)
+        public async Task<ResponseDto<NoContent>> DeleteAsync(string id)
         {
-            throw new NotImplementedException();
+            var result = await _productCollection.DeleteOneAsync(x => x.Id == id);
+            if (result.DeletedCount>0)
+            {
+                return ResponseDto<NoContent>.Success(204);
+            }
+            else
+            {
+                return ResponseDto<NoContent>.Fail("Silinecek ürün bulunamadı", 404);
+            }
         }
 
-        public Task<ResponseDto<List<ProductDto>>> GetAllAsync()
+        public async Task<ResponseDto<List<ProductDto>>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var products = await _productCollection.Find(product => true).ToListAsync();
+            return ResponseDto<List<ProductDto>>.Success(_mapper.Map<List<ProductDto>>(products), 200);
         }
 
-        public Task<ResponseDto<ProductDto>> GetByIdAsync(string id)
+        public async Task<ResponseDto<ProductDto>> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            var product = await _productCollection.Find<Product>(x => x.Id == id).FirstOrDefaultAsync();
+            if (product == null)
+            {
+                return ResponseDto<ProductDto>.Fail("Ürün bulunamadı", 404);
+            }
+            else
+            {
+                return ResponseDto<ProductDto>.Success(_mapper.Map<ProductDto>(product), 200);
+            }
         }
 
-        public Task<ResponseDto<NoContent>> UpdateAsync(UpdateProductDto updateProductDto)
+        public async Task<ResponseDto<NoContent>> UpdateAsync(UpdateProductDto updateProductDto)
         {
-            throw new NotImplementedException();
+            var updatedProduct = _mapper.Map<Product>(updateProductDto);
+            var result = await _productCollection.FindOneAndReplaceAsync(x => x.Id == updateProductDto.Id, updatedProduct);
+            if (result== null)
+            {
+                return ResponseDto<NoContent>.Fail("Güncellenecek ürün bulunamadı", 404);
+            }
+            else
+            {
+                return ResponseDto<NoContent>.Success(204);
+            }
         }
     }
 }
