@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using UpSchoolECommerce.IdentityServer.Dtos;
@@ -40,6 +41,19 @@ namespace UpSchoolECommerce.IdentityServer.Controllers
                 return BadRequest(ResponseDto<NoContent>.Fail(result.Errors.Select(x=>x.Description).ToList(),400));
             }
             return NoContent();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUser()
+        {
+            var userId = User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub);
+            var user = await _userManager.FindByIdAsync(userId.Value);
+            return Ok(new {
+                Id = user.Id,
+                UserName=user.UserName,
+                Email=user.Email,
+                City=user.City
+            });
         }
     }
 }

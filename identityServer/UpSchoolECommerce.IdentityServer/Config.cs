@@ -9,14 +9,14 @@ namespace UpSchoolECommerce.IdentityServer
 {
     public static class Config
     {
-        public static IEnumerable<IdentityResource> ıdentityResources =>
+        public static IEnumerable<IdentityResource> IdentityResources =>
                    new IdentityResource[]
                    {
                        new IdentityResources.Email(),
                        new IdentityResources.Profile(),
                        new IdentityResources.OpenId()
                    };
-        public static IEnumerable<ApiResource> ApiResource =>
+        public static IEnumerable<ApiResource> ApiResources =>
                    new ApiResource[]
                    {
                        new ApiResource("Resources_Catalog")    {Scopes={"Catalog_FullPermission"}},
@@ -66,17 +66,15 @@ namespace UpSchoolECommerce.IdentityServer
                 //sisteme giriş yapılınca kullanılcak
                 new Client
                 {
-                    ClientId = "interactive",
-                    ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
+                    ClientId = "mvcclientforuser",
+                    ClientName="aspnetcore",
+                    ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedGrantTypes = GrantTypes.Code,
-                    AccessTokenLifetime=50,
-                    RedirectUris = { "https://localhost:44300/signin-oidc" },
-                    FrontChannelLogoutUri = "https://localhost:44300/signout-oidc",
-                    PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AccessTokenLifetime=300,
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "scope2" }
+                    AllowedScopes = { "Catalog_FullPermission",IdentityServerConstants.StandardScopes.Email,IdentityServerConstants.StandardScopes.OpenId,IdentityServerConstants.StandardScopes.Profile,IdentityServerConstants.StandardScopes.OfflineAccess,IdentityServerConstants.LocalApi.ScopeName }
                 },
             };
     }

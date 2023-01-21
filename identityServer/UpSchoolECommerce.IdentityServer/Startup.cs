@@ -49,7 +49,8 @@ namespace UpSchoolECommerce.IdentityServer
                 // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
                 options.EmitStaticAudienceClaim = true;
             })
-                .AddInMemoryApiResources(Config.ApiResource)
+                .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
                 .AddAspNetIdentity<ApplicationUser>();
@@ -80,7 +81,7 @@ namespace UpSchoolECommerce.IdentityServer
             }
 
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();

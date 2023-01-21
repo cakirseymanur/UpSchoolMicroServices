@@ -25,31 +25,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolECommerce.IdentityS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{69913F1B-1EAC-4E20-9C65-606C93A87629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Services.Basket", "Services\Basket\UpSchoolMicroServices.Services.Basket\UpSchoolMicroServices.Services.Basket.csproj", "{8F987266-0B63-4BD3-954A-E357DA4F8A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Services.Basket", "Services\Basket\UpSchoolMicroServices.Services.Basket\UpSchoolMicroServices.Services.Basket.csproj", "{8F987266-0B63-4BD3-954A-E357DA4F8A82}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{13F3D158-F2C1-4F5F-B485-3B37018A8F55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Services.Discount", "Services\Discount\UpSchoolMicroServices.Services.Discount\UpSchoolMicroServices.Services.Discount.csproj", "{C6DFBD2C-F1B3-4529-9281-D09BFD1FD7DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Services.Discount", "Services\Discount\UpSchoolMicroServices.Services.Discount\UpSchoolMicroServices.Services.Discount.csproj", "{C6DFBD2C-F1B3-4529-9281-D09BFD1FD7DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FakePayment", "FakePayment", "{0448D053-109E-485D-8225-887584C8ADE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Services.FakePayment", "Services\FakePayment\UpSchoolMicroServices.Services.FakePayment\UpSchoolMicroServices.Services.FakePayment.csproj", "{D2ACD5FE-B4A8-4259-B84F-D8C5C91D1678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Services.FakePayment", "Services\FakePayment\UpSchoolMicroServices.Services.FakePayment\UpSchoolMicroServices.Services.FakePayment.csproj", "{D2ACD5FE-B4A8-4259-B84F-D8C5C91D1678}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{95B04CEC-0F85-4FC8-8D89-A88E5C67D00E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Services.Order.Api", "Services\Order\UpSchoolMicroServices.Services.Order.Api\UpSchoolMicroServices.Services.Order.Api.csproj", "{6FA5B009-4C15-4E18-9B7E-B90880BF5DD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Services.Order.Api", "Services\Order\UpSchoolMicroServices.Services.Order.Api\UpSchoolMicroServices.Services.Order.Api.csproj", "{6FA5B009-4C15-4E18-9B7E-B90880BF5DD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Order.Application", "Services\Order\UpSchoolMicroServices.Order.Application\UpSchoolMicroServices.Order.Application.csproj", "{80DDE677-13BC-427F-99B1-DB055DE47DA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Order.Application", "Services\Order\UpSchoolMicroServices.Order.Application\UpSchoolMicroServices.Order.Application.csproj", "{80DDE677-13BC-427F-99B1-DB055DE47DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Order.Domain", "Services\Order\UpSchoolMicroServices.Order.Domain\UpSchoolMicroServices.Order.Domain.csproj", "{D5197D39-025C-4552-BBB7-5C2693F6CC57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Order.Domain", "Services\Order\UpSchoolMicroServices.Order.Domain\UpSchoolMicroServices.Order.Domain.csproj", "{D5197D39-025C-4552-BBB7-5C2693F6CC57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Order.Domain.Core", "Services\Order\UpSchoolMicroServices.Order.Domain.Core\UpSchoolMicroServices.Order.Domain.Core.csproj", "{7895AA4C-6AF0-4178-9E4D-79F2FA3161F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Order.Domain.Core", "Services\Order\UpSchoolMicroServices.Order.Domain.Core\UpSchoolMicroServices.Order.Domain.Core.csproj", "{7895AA4C-6AF0-4178-9E4D-79F2FA3161F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Order.Infrastructure", "Services\Order\UpSchoolMicroServices.Order.Infrastructure\UpSchoolMicroServices.Order.Infrastructure.csproj", "{97D43F9D-C7EF-474B-AFE1-16FD105CEC61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Order.Infrastructure", "Services\Order\UpSchoolMicroServices.Order.Infrastructure\UpSchoolMicroServices.Order.Infrastructure.csproj", "{97D43F9D-C7EF-474B-AFE1-16FD105CEC61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{E87C55B7-567E-43B1-BC09-CFD5752D01CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchoolMicroServices.Services.PhotoStock", "Services\PhotoStock\UpSchoolMicroServices.Services.PhotoStock\UpSchoolMicroServices.Services.PhotoStock.csproj", "{B42F89C8-48FE-4A57-A2A3-CAFB437DA1EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchoolMicroServices.Services.PhotoStock", "Services\PhotoStock\UpSchoolMicroServices.Services.PhotoStock\UpSchoolMicroServices.Services.PhotoStock.csproj", "{B42F89C8-48FE-4A57-A2A3-CAFB437DA1EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
