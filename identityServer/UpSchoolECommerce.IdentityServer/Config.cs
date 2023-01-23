@@ -21,8 +21,8 @@ namespace UpSchoolECommerce.IdentityServer
                    {
                        new ApiResource("Resources_Catalog")    {Scopes={"Catalog_FullPermission"}},
                          //new ApiResource("Resources_Order")      {Scopes={ "Order_FullPermission" }},
-                         //  new ApiResource("Resources_Discount")   {Scopes={ "Discount_FullPermission" }},
-                         //    new ApiResource("Resources_Basket")     {Scopes={ "Basket_FullPermission" }},
+                          new ApiResource("Resources_Discount")   {Scopes={ "Discount_FullPermission" }},
+                             new ApiResource("Resources_Basket")     {Scopes={ "Basket_FullPermission" }},
                          //      new ApiResource("Resources_Payment")    {Scopes={ "Payment_FullPermission" }},
                                  new ApiResource("Resources_Photo_Stock"){Scopes={ "Photo_Stock_FullPermission" }},
                                    new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
@@ -33,8 +33,8 @@ namespace UpSchoolECommerce.IdentityServer
             {
                 new ApiScope("Catalog_FullPermission","Katalog API için tam yetkili erişim"),
                 //new ApiScope("Order_FullPermission","Sipariş API için tam yetkili erişim"),
-                //new ApiScope("Discount_FullPermission","İndirim API için tam yetkili erişim"),
-                //new ApiScope("Basket_FullPermission","Sepet API için tam yetkili erişim"),
+                new ApiScope("Discount_FullPermission","İndirim API için tam yetkili erişim"),
+                new ApiScope("Basket_FullPermission","Sepet API için tam yetkili erişim"),
                 //new ApiScope("Payment_FullPermission","Ödeme API için tam yetkili erişim"),
                 new ApiScope("Photo_Stock_FullPermission","Fotoğraf API için tam yetkili erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
@@ -74,7 +74,7 @@ namespace UpSchoolECommerce.IdentityServer
                     AccessTokenLifetime=300,
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "Catalog_FullPermission",IdentityServerConstants.StandardScopes.Email,IdentityServerConstants.StandardScopes.OpenId,IdentityServerConstants.StandardScopes.Profile,IdentityServerConstants.StandardScopes.OfflineAccess,IdentityServerConstants.LocalApi.ScopeName }
+                    AllowedScopes = { "Catalog_FullPermission", "Basket_FullPermission", "Discount_FullPermission", IdentityServerConstants.StandardScopes.Email,IdentityServerConstants.StandardScopes.OpenId,IdentityServerConstants.StandardScopes.Profile,IdentityServerConstants.StandardScopes.OfflineAccess,IdentityServerConstants.LocalApi.ScopeName }
                 },
             };
     }
