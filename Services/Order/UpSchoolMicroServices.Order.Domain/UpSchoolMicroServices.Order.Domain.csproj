@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UpSchoolMicroServices.Order.Domain.Core\UpSchoolMicroServices.Order.Domain.Core.csproj" />
+  </ItemGroup>
+
 </Project>
