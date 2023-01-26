@@ -4,3 +4,5 @@ photostock-->5012
 basket-->5013
 discount-->5014
 order-->5015
+payment-->5016
+gateway-->5000
